@@ -1,9 +1,8 @@
-````markdown
 # BlipBurst
 
-**BlipBurst** is a lightweight TypeScript library to simulate controlled bursts of network errors during API calls. Useful for testing error handling, retries, and resilience in both frontend (React, Vue, Angular) and backend (Node.js) environments.
+**BlipBurst** is a lightweight TypeScript library to simulate controlled bursts of network errors during API calls. It's useful for testing error handling, retries, and resilience in both frontend (React, Vue, Angular) and backend (Node.js) environments.
 
----
+
 
 ## Features
 
@@ -12,7 +11,7 @@
 - Works seamlessly in Node.js (with `node-fetch`) and browsers (native `fetch`).
 - Fully typed with TypeScript.
 
----
+
 
 ## Installation
 
@@ -20,20 +19,19 @@
 npm install blipburst
 # or
 yarn add blipburst
-````
-
-For Node.js environments, install peer dependency:
+```
+For Node.js environments, install the peer dependency:
 
 ```bash
 npm install node-fetch@2
 npm install --save-dev @types/node-fetch@2
 ```
 
----
+
 
 ## Usage
 
-### Basic example (Node.js or browser)
+### Basic Example (Node.js or Browser)
 
 ```ts
 import { BlipBurst } from 'blipburst';
@@ -59,7 +57,7 @@ test();
 
 ---
 
-### React usage example
+### React Usage Example
 
 ```tsx
 import React, { useEffect, useState } from 'react';
@@ -111,12 +109,12 @@ export default function BlipBurstDemo() {
 
 ### `new BlipBurst(options)`
 
-| Option      | Type             | Description                                   | Default                                          |
-| ----------- | ---------------- | --------------------------------------------- | ------------------------------------------------ |
-| `startDate` | `Date \| string` | Start time for error simulation window        | Current time (`new Date()`)                      |
-| `endDate`   | `Date \| string` | End time for error simulation window          | 4 days after startDate                           |
-| `frequency` | `number`         | Errors per minute (0 means throw all at once) | `1 / (24 * 60)` (1 error/day)                    |
-| `total`     | `number`         | Total errors to throw during the window       | 4                                                |
+| Option      | Type             | Description                                   | Default                                        |
+|-------------|------------------|-----------------------------------------------|------------------------------------------------|
+| `startDate` | `Date \| string` | Start time for error simulation window        | Current time (`new Date()`)                    |
+| `endDate`   | `Date \| string` | End time for error simulation window          | 4 days after startDate                         |
+| `frequency` | `number`         | Errors per minute (0 means throw all at once) | `1 / (24 * 60)` (1 error/day)                  |
+| `total`     | `number`         | Total errors to throw during the window       | 4                                              |
 | `url`       | `string`         | URL to send requests to                       | `'https://jsonplaceholder.typicode.com/posts/1'` |
 
 ### `.makeRequest()`
@@ -131,6 +129,3 @@ Makes a network request to the configured URL.
 ## License
 
 MIT © Ajmal N
-
-```
-```
