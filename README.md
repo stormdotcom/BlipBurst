@@ -2,16 +2,12 @@
 
 **BlipBurst** is a lightweight TypeScript library to simulate controlled bursts of network errors during API calls. It's useful for testing error handling, retries, and resilience in both frontend (React, Vue, Angular) and backend (Node.js) environments.
 
-
-
 ## Features
 
 - Simulate errors either all at once or at a configurable frequency.
 - Define custom error windows with start and end times.
 - Works seamlessly in Node.js (with `node-fetch`) and browsers (native `fetch`).
 - Fully typed with TypeScript.
-
-
 
 ## Installation
 
@@ -20,14 +16,13 @@ npm install blipburst
 # or
 yarn add blipburst
 ```
+
 For Node.js environments, install the peer dependency:
 
 ```bash
 npm install node-fetch@2
 npm install --save-dev @types/node-fetch@2
 ```
-
-
 
 ## Usage
 
