@@ -1,0 +1,36 @@
+{
+  "name": "blipburst",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stormdotcom/BlipBurst.git"
+  },
+  "keywords": [
+    "network",
+    "error",
+    "simulation",
+    "testing",
+    "fetch",
+    "typescript"
+  ],
+  "author": "Ajmal N",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stormdotcom/BlipBurst/issues"
+  },
+  "homepage": "https://github.com/stormdotcom/BlipBurst#readme",
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.12",
+    "typescript": "^5.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}
