@@ -121,8 +121,8 @@ export default function BlipBurstDemo() {
 
 Makes a network request to the configured URL.
 
-* Throws a simulated error based on frequency and time window.
-* Returns response JSON when no error is simulated.
+- Throws a simulated error based on frequency and time window.
+- Returns response JSON when no error is simulated.
 
 ---
 
