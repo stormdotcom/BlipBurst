@@ -7,34 +7,34 @@
   "types": "./dist/esm/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/esm/index.d.ts",
       "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.cjs",
-      "types": "./dist/esm/index.d.ts"
+      "require": "./dist/cjs/index.cjs"
     },
     "./nestjs": {
+      "types": "./dist/esm/adapters/nestjs/index.d.ts",
       "import": "./dist/esm/adapters/nestjs/index.js",
-      "require": "./dist/cjs/adapters/nestjs/index.cjs",
-      "types": "./dist/esm/adapters/nestjs/index.d.ts"
+      "require": "./dist/cjs/adapters/nestjs/index.cjs"
     },
     "./express": {
+      "types": "./dist/esm/adapters/express/index.d.ts",
       "import": "./dist/esm/adapters/express/index.js",
-      "require": "./dist/cjs/adapters/express/index.cjs",
-      "types": "./dist/esm/adapters/express/index.d.ts"
+      "require": "./dist/cjs/adapters/express/index.cjs"
     },
     "./react": {
+      "types": "./dist/esm/adapters/react/index.d.ts",
       "import": "./dist/esm/adapters/react/index.js",
-      "require": "./dist/cjs/adapters/react/index.cjs",
-      "types": "./dist/esm/adapters/react/index.d.ts"
+      "require": "./dist/cjs/adapters/react/index.cjs"
     },
     "./testing": {
+      "types": "./dist/esm/adapters/testing/index.d.ts",
       "import": "./dist/esm/adapters/testing/index.js",
-      "require": "./dist/cjs/adapters/testing/index.cjs",
-      "types": "./dist/esm/adapters/testing/index.d.ts"
+      "require": "./dist/cjs/adapters/testing/index.cjs"
     },
     "./intercept": {
+      "types": "./dist/esm/intercept/index.d.ts",
       "import": "./dist/esm/intercept/index.js",
-      "require": "./dist/cjs/intercept/index.cjs",
-      "types": "./dist/esm/intercept/index.d.ts"
+      "require": "./dist/cjs/intercept/index.cjs"
     }
   },
   "bin": {

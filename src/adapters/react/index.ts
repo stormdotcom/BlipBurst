@@ -1,4 +1,4 @@
-import { useRef, useCallback } from 'react';
+// React adapter — uses dynamic require to avoid peer dep at build/type-check time.
 import { BlipBurst } from '../../core/BlipBurst.js';
 import type { BlipBurstOptions, Metrics } from '../../types.js';
 
@@ -7,6 +7,8 @@ export function useBlipBurst(options: BlipBurstOptions): {
   getMetrics: () => Metrics;
   instance: BlipBurst;
 } {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { useRef, useCallback } = require('react') as typeof import('react');
   const instanceRef = useRef<BlipBurst | null>(null);
   if (!instanceRef.current) {
     instanceRef.current = new BlipBurst(options);
