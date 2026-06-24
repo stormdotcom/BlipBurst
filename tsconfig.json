@@ -1,13 +1,20 @@
 {
   "compilerOptions": {
-    "target": "ES2019",
+    "target": "ES2020",
     "module": "ESNext",
-    "moduleResolution": "node",
-    "outDir": "dist",
+    "moduleResolution": "bundler",
+    "outDir": "dist/esm",
+    "rootDir": ".",
     "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
     "esModuleInterop": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "lib": ["ES2020", "DOM"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "cli/**/*", "tests/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

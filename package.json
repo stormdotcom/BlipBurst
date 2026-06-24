@@ -1,36 +1,85 @@
 {
   "name": "blipburst",
-  "version": "1.0.2",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "TypeScript chaos engineering library — latency spikes, circuit breakers, fault injection, intercept mode",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./nestjs": {
+      "import": "./dist/esm/adapters/nestjs/index.js",
+      "require": "./dist/cjs/adapters/nestjs/index.cjs",
+      "types": "./dist/esm/adapters/nestjs/index.d.ts"
+    },
+    "./express": {
+      "import": "./dist/esm/adapters/express/index.js",
+      "require": "./dist/cjs/adapters/express/index.cjs",
+      "types": "./dist/esm/adapters/express/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/esm/adapters/react/index.js",
+      "require": "./dist/cjs/adapters/react/index.cjs",
+      "types": "./dist/esm/adapters/react/index.d.ts"
+    },
+    "./testing": {
+      "import": "./dist/esm/adapters/testing/index.js",
+      "require": "./dist/cjs/adapters/testing/index.cjs",
+      "types": "./dist/esm/adapters/testing/index.d.ts"
+    },
+    "./intercept": {
+      "import": "./dist/esm/intercept/index.js",
+      "require": "./dist/cjs/intercept/index.cjs",
+      "types": "./dist/esm/intercept/index.d.ts"
+    }
+  },
+  "bin": {
+    "blipburst": "./dist/cjs/cli/blipburst.cjs"
+  },
+  "files": ["dist/", "README.md", "LICENSE"],
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "prepare": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stormdotcom/BlipBurst.git"
-  },
-  "keywords": [
-    "network",
-    "error",
-    "simulation",
-    "testing",
-    "fetch",
-    "typescript"
-  ],
+  "keywords": ["network", "chaos", "error", "simulation", "testing", "fetch", "typescript", "circuit-breaker", "fault-injection"],
   "author": "Ajmal N",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/stormdotcom/BlipBurst/issues"
-  },
+  "repository": { "type": "git", "url": "git+https://github.com/stormdotcom/BlipBurst.git" },
+  "bugs": { "url": "https://github.com/stormdotcom/BlipBurst/issues" },
   "homepage": "https://github.com/stormdotcom/BlipBurst#readme",
-  "devDependencies": {
-    "@types/node-fetch": "^2.6.12",
-    "typescript": "^5.0.0"
-  },
   "type": "module",
+  "peerDependencies": {
+    "axios": ">=0.21.0",
+    "@opentelemetry/api": ">=1.0.0",
+    "react": ">=17.0.0",
+    "@angular/common": ">=14.0.0",
+    "rxjs": ">=7.0.0",
+    "@nestjs/common": ">=9.0.0",
+    "express": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "axios": { "optional": true },
+    "@opentelemetry/api": { "optional": true },
+    "react": { "optional": true },
+    "@angular/common": { "optional": true },
+    "rxjs": { "optional": true },
+    "@nestjs/common": { "optional": true },
+    "express": { "optional": true }
+  },
   "dependencies": {
     "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.12",
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.6.0"
   }
 }
